@@ -1,0 +1,243 @@
+.extract-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.extract-container h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.extract-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.client-info,
+.extract-summary {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.1);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+}
+
+.client-info h3,
+.extract-summary h3 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 10px;
+}
+
+.info-grid,
+.summary-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-item,
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.info-item:last-child,
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.info-label,
+.summary-label {
+  font-weight: 600;
+  color: #1e40af;
+  font-size: 14px;
+}
+
+.info-value,
+.summary-value {
+  color: #1e3a8a;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.operations-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.1);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+  margin-bottom: 30px;
+}
+
+.operations-section h3 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 10px;
+}
+
+.operations-table {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr 1fr 0.8fr;
+  gap: 15px;
+  padding: 15px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  font-size: 14px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr 1fr 0.8fr;
+  gap: 15px;
+  padding: 15px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: center;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.table-row:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.table-row:hover {
+  background: #f1f5f9;
+}
+
+.buy-operation {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.sell-operation {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.extract-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.download-button,
+.print-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.download-button {
+  background: #1e3a8a;
+  color: #ffffff;
+}
+
+.download-button:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+}
+
+.print-button {
+  background: #ffffff;
+  color: #1e3a8a;
+  border: 2px solid #1e3a8a;
+}
+
+.print-button:hover {
+  background: #1e3a8a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+}
+
+@media (max-width: 768px) {
+  .extract-container {
+    padding: 15px;
+  }
+
+  .extract-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .table-header span,
+  .table-row span {
+    padding: 8px 0;
+  }
+
+  .table-header span {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .table-row span {
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .extract-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-button,
+  .print-button {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .extract-container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media print {
+  .extract-actions {
+    display: none;
+  }
+  
+  .extract-container {
+    max-width: none;
+    margin: 0;
+    padding: 15px;
+  }
+}

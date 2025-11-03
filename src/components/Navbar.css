@@ -50,11 +50,24 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+}
+
+.nav-link.active::before {
+  width: 80%;
 }
 
 .nav-link::before {
