@@ -125,7 +125,7 @@ const Extract = () => {
       <div className="extract-actions">
         <PDFDownloadLink
           document={<ExtractReport extractData={extractData} />}
-          fileName={`extrato-acotiana-${new Date().toISOString().split('T')[0]}.pdf`}
+          fileName={`extrato-acoriana-${new Date().toISOString().split('T')[0]}.pdf`}
           className="download-button"
         >
           {({ loading }) =>
