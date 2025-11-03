@@ -1,6 +1,6 @@
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ activeTab, setActiveTab }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -10,13 +10,20 @@ const Navbar = () => {
         <div className="navbar-menu">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="#converter" className="nav-link">Conversor</a>
+              <button 
+                className={`nav-link ${activeTab === 'exchange' ? 'active' : ''}`}
+                onClick={() => setActiveTab('exchange')}
+              >
+                Cotações
+              </button>
             </li>
             <li className="nav-item">
-              <a href="#rates" className="nav-link">Cotações</a>
-            </li>
-            <li className="nav-item">
-              <a href="#about" className="nav-link">Sobre</a>
+              <button 
+                className={`nav-link ${activeTab === 'extract' ? 'active' : ''}`}
+                onClick={() => setActiveTab('extract')}
+              >
+                Extrato
+              </button>
             </li>
           </ul>
         </div>
